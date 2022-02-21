@@ -2,9 +2,11 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 class Product {
+    // attribute Product
     private int idProduct;
     private int price;
 
+    // contructor
     public Product() {
     }
 
@@ -13,6 +15,7 @@ class Product {
         this.price = price;
     }
 
+    // getter setter idProduct
     public int getIdProduct() {
         return idProduct;
     }
@@ -21,6 +24,7 @@ class Product {
         this.idProduct = idProduct;
     }
 
+    // getter setter price
     public int getPrice() {
         return price;
     }
@@ -29,7 +33,9 @@ class Product {
         this.price = price;
     }
 
+    // method untuk menampilkan semua attribute Product
     public void printProduct() {
+        // formatter untuk menampilkan price dalam format idr
         Locale id = new Locale("in", "ID");
         NumberFormat idr = NumberFormat.getInstance(id);
         System.out.println("Id Product : " + getIdProduct());

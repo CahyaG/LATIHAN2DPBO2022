@@ -1,17 +1,19 @@
 <?php
 include("Product.php");
 
+// Hardware merupakan turunan Product
 class Hardware extends Product
 {
+    // attribute Hardware
     private $brand = "";
     private $model = "";
-
+    // constructor
     public function __construct($brand = "", $model = "")
     {
         $this->brand = $brand;
         $this->model = $model;
     }
-
+    // getter setter brand
     public function getBrand()
     {
         return $this->brand;
@@ -20,7 +22,7 @@ class Hardware extends Product
     {
         $this->brand = $brand;
     }
-
+    // getter setter model
     public function getModel()
     {
         return $this->model;
@@ -29,7 +31,7 @@ class Hardware extends Product
     {
         $this->model = $model;
     }
-
+    // method untuk menampilkan semua attribute Hardware
     public function printHardware()
     {
         echo "Brand: " . $this->getBrand() . "<br/>";

@@ -2,9 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // scanner untuk proses input
         Scanner inp = new Scanner(System.in);
+        // membuat object dari class Memory
         Memory mem = new Memory();
         try {
+            // input/set attribut dari object mem
             System.out.print("Id Product: ");
             mem.setIdProduct(inp.nextInt());
 
@@ -32,12 +35,15 @@ public class Main {
             }
 
         } catch (Exception e) {
+            // jika ada exception maka tampilkan dan keluarkan program
             System.out.println(e.getMessage());
             System.exit(0);
         } finally {
+            // setelah proses input selesai, tutup scanner
             inp.close();
         }
 
+        // print hasil
         System.out.println("===========================\nOutput\n===========================");
         mem.printProduct();
         mem.printHardware();

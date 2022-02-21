@@ -3,14 +3,17 @@ using namespace std;
 
 #include "Hardware.cpp"
 
+// Memory merupakan turunan dari Hardware
 class Memory : public Hardware
 {
 private:
+    // Attribute dari Memory
     int frequency;
     int memorySize;
     bool supportCuda;
 
 public:
+    // constructor
     Memory() {}
     Memory(int frequency, int memorySize, bool supportCuda)
     {
@@ -19,6 +22,7 @@ public:
         this->supportCuda = supportCuda;
     }
 
+    // getter setter frequency
     int getFrequency()
     {
         return this->frequency;
@@ -28,6 +32,7 @@ public:
         this->frequency = frequency;
     }
 
+    // getter setter memorySize
     int getMemorySize()
     {
         return this->memorySize;
@@ -37,6 +42,8 @@ public:
         this->memorySize = memorySize;
     }
 
+    // getter setter supportCuda
+    // getter menggunakan is karena attribut mempunyai tipe data boolean
     bool isSupportCuda()
     {
         return this->supportCuda;
@@ -46,6 +53,7 @@ public:
         this->supportCuda = supportCuda;
     }
 
+    // method untuk menampilkan semua attribut Memory
     void printMemory()
     {
         cout << "Frequency: " << getFrequency() << " Mhz" << endl;
@@ -60,5 +68,6 @@ public:
             cout << "No" << endl;
         }
     }
+    // destructor
     ~Memory() {}
 };

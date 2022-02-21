@@ -1,8 +1,11 @@
+// Memory merupakan turunan Hardware
 class Memory extends Hardware {
+    // attribute Memory
     private int frequency;
     private int memorySize;
     private boolean supportsCuda;
 
+    // contructor
     public Memory() {
     }
 
@@ -12,6 +15,7 @@ class Memory extends Hardware {
         this.supportsCuda = supportsCuda;
     }
 
+    // getter setter frequency
     public int getFrequency() {
         return frequency;
     }
@@ -20,6 +24,7 @@ class Memory extends Hardware {
         this.frequency = frequency;
     }
 
+    // getter setter memorySize
     public int getMemorySize() {
         return memorySize;
     }
@@ -28,6 +33,8 @@ class Memory extends Hardware {
         this.memorySize = memorySize;
     }
 
+    // getter setter supportCuda
+    // getter menggunakan is karena attribute memiliki tipe data boolean
     public boolean isSupportsCuda() {
         return supportsCuda;
     }
@@ -36,6 +43,7 @@ class Memory extends Hardware {
         this.supportsCuda = supportsCuda;
     }
 
+    // method untuk menampilkan semua attribute Memory
     public void printMemory() {
         System.out.println("Frequency : " + getFrequency() + " Mhz");
         System.out.println("Memory Size : " + getMemorySize() + " GB");
