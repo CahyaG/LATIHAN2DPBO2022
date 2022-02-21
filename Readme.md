@@ -46,10 +46,17 @@ Project ini memiliki 3 kelas yaitu `Product`, `Hardware`, dan `Memory`. `Product
 
 ## Screenshots Program
 1. C++
+
 ![c++](/screenshots/cpp.png)
+
 2. Java
+
 ![java](/screenshots/Java.png)
+
 3. PHP
+
 ![PHP](/screenshots/php.png)
+
 4. Python
+
 ![py](/screenshots/py.png)
